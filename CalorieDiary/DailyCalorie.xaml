@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalorieDiary.DailyCalorie" Title="Daily Calorie Intake">
+    <StackLayout HorizontalOptions="Start" Padding="10,10,10,10">
+        <Label Text="Calculate Your Daily Calories Here" HorizontalTextAlignment="Center" />
+        <Label Text="Click the picture" HorizontalTextAlignment="Center" />
+
+        <Grid Padding="10,30,10,0">
+            <StackLayout Grid.Row="0" Grid.Column="0">
+                <ImageButton Grid.Row="0" Grid.Column="0" Source="Calorie"  Clicked="CalorieCalculator" />
+                <Label Grid.Row="0" Grid.Column="0" Text="Calculator" HorizontalOptions="Center" FontAttributes="Bold"/>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

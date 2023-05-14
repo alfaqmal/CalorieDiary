@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalorieDiary.DailyProtein" Title="Daily Protein Intake">
+    <StackLayout>
+        
+    <StackLayout HorizontalOptions="Start" Padding="10,10,10,10">
+        <Label Text="Calculate Your Daily Protein Here" HorizontalTextAlignment="Center" />
+        <Entry x:Name="inputWeight" Placeholder="Enter Your Weight in Kg" Keyboard="Numeric"/>
+    </StackLayout>
+
+        <FlexLayout Direction="Row"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+            <Button x:Name="calculateButton" Text="Calculate" VerticalOptions="CenterAndExpand" WidthRequest="110" BackgroundColor="DarkRed" TextColor="White" Clicked="OnCalculateProtein"/>
+            <Button x:Name="resetButton" Text="Reset" VerticalOptions="CenterAndExpand" WidthRequest="110" BackgroundColor="SlateGray" TextColor="White"  Clicked="OnReset" />
+        </FlexLayout>
+
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="Your Protein Result" HorizontalTextAlignment="Center"/>
+            <Label x:Name="outputResult" Text="0.00" HorizontalTextAlignment="Center" />
+
+           
+        </StackLayout>
+
+
+       
+    
+    </StackLayout>
+</ContentPage>

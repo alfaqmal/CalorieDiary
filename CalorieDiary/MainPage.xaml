@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalorieDiary.MainPage" Title="Calorie Diary">
+    <ScrollView>
+
+    <StackLayout>
+        <StackLayout>
+            <Entry x:Name="inputMeal" Placeholder="Enter Meals" Keyboard="Text"/>
+            <Entry x:Name="inputCalorie" Placeholder="Enter Calorie in Kcal" Keyboard="Numeric"/>
+            <Entry x:Name="inputProtein" Placeholder="Enter Protein in g" Keyboard="Numeric"/>
+
+        </StackLayout>
+            
+       
+
+        <FlexLayout Direction="Row"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+            <ImageButton Source="calendaricon.png" WidthRequest="50" HeightRequest="50" IsVisible="true" HorizontalOptions="End"/>
+                <!--<Label Text="Choose a date" HorizontalTextAlignment="Start" />-->
+                <DatePicker x:Name="selectDate" DateSelected="onDatePickerSelected" Format="dd/MM/yyyy"/>
+            </FlexLayout>
+
+            <FlexLayout Direction="Row"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+                <Button x:Name="saveButton" Text="Save" VerticalOptions="CenterAndExpand" WidthRequest="110" BackgroundColor="SlateGray" TextColor="White" Clicked="OnSaveHistory" />
+                <Button x:Name="resetButton" Text="Reset" VerticalOptions="CenterAndExpand" WidthRequest="110" BackgroundColor="SlateGray" TextColor="White"  Clicked="OnReset" />
+            </FlexLayout>
+
+
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

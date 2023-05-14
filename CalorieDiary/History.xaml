@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalorieDiary.History">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout HorizontalOptions="Fill" >
+                <!-- <Label x:Name ="displayHistory" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>-->
+                <ListView x:Name="displayHistory" ItemsSource="{Binding DateRecorded}">
+                    <ListView.Header>
+                        <Grid>
+                            <Label Text="Date" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="1" Text="Meal" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="2" Text="Calorie" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="3" Text="Protein" HorizontalOptions="Center" FontAttributes="Bold" />
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Label Text="{Binding DateRecorded}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="1" Text="{Binding Meal}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="2" Text="{Binding Calorie}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="3" Text="{Binding Protein}" HorizontalOptions="Center" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
